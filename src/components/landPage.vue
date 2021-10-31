@@ -16,16 +16,16 @@
                 </p>
             </div>
             <div class="col-sm-12 col-lg-6 col-md-6 col-xs-12">
-                <InputFeild label="First Name" name="fname" />
+                <InputFeild label="First Name" name="fname" error="Invalid fist name"/>
             </div>
             <div class="col-sm-12 col-lg-6 col-md-6 col-xs-12">
-                <InputFeild label="Last Name" name="lname"/>
+                <InputFeild label="Last Name" name="lname" error="Invalid fist name"/>
             </div>
             <div class="col-sm-12 col-lg-6 col-md-6 col-xs-12 mt-3">
-                <InputFeild label="Email" name="email"/>
+                <InputFeild label="Email" name="email" error="Invalid fist name"/>
             </div>
             <div class="col-sm-12 col-lg-6 col-md-6 col-xs-12 mt-3">
-                <InputFeild label="Phone Number" name="mobile"/>
+                <InputFeild label="Phone Number" name="mobile" error="Invalid fist name"/>
             </div>
         </div>
         <div class="row mt-3">
@@ -36,7 +36,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12 col-lg-6 col-md-6 col-xs-12">
-                <InputFeild label="Enter Offer" name="myOffer"/>
+                <InputFeild label="Enter Offer" name="myOffer" error="Invalid fist name"/>
             </div>
         </div>
         <div class="row mb-3">
@@ -50,6 +50,10 @@
 
             </div>
         </div>
+    </div>
+    <div class="footer mt-3">
+        <hr style="width:100%; text-align:center; background-color:lightslategray">
+        <button class=" col-sm-12 col-lg-6 col-md-6 col-xs-12 btn-submit" @click="submit()">Submit</button><br>
     </div>
 </div>    
 </template>

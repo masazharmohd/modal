@@ -15,14 +15,20 @@
         </div> 
       </div>
       <div class="mt-4" v-if="visible1">
-        <div class="row">
+          <div class="row">
+        <div class="btn-group col-sm-12 col-md-6">
+                <button class="col-6 b-option left-button" :class='{"highlight":!showTrade}' @click="noTrade">No Trade in</button>
+                <button class="col-6 b-option right-button" :class='{"highlight":showTrade}'  @click="TradeIn">Yes, I have a Trade-in</button>
+            </div>
+      </div>
+        <!-- <div class="row">
             <div class="col-3">
               <button @click="noTrade('noTrade')" id="button-trade">No Trade In</button>
             </div>
             <div class="col-3">
               <button @click="tradeIn('yesTrade')" id="button-trade">Yes, I have A Trade-In</button>
             </div>
-        </div>
+        </div> -->
         <div class="row mt-4" v-if="showTrade">
             <div class="col-sm-12 col-lg-6 col-md-6 col-xs-12">
                 <DropDown label="Select Year" :yearsArr="yearsArr" name="years"/>
@@ -70,12 +76,10 @@ export default {
           this.openAccordion1 = !this.openAccordion1;
           this.visible1 = !this.visible1;
         },
-        noTrade(value) {
-          this.trade = value;
+        noTrade() {
           this.showTrade = false;
         },
-        tradeIn(value) {
-          this.trade = value;
+        TradeIn() {
           this.showTrade = true;
         },
         handleField(e){
@@ -125,6 +129,35 @@ export default {
     outline-color: red;
 }
     
+.b-option{
+    outline: none;
+    font-size: 14px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    background: #fff;
+    border: 1px solid grey;
+}
+
+.highlight{
+    font-weight: 700;
+    border: 2px solid #b52519;;
+    background-color: #b5251920;
+}
+.left-button{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.right-button{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
 /* #button-trade:focus {
     font-family: bold;
     background-color: rgb(230, 227, 227);

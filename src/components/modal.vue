@@ -21,11 +21,6 @@
                     <ResultPage v-on:close-modal="$emit('close-modal')" :items="items" :tradeItems="tradeItems" />
                 </div>
 
-                <div class="footer mt-3">
-                    <hr style="width:100%; text-align:center; background-color:lightslategray">
-                    <button class=" col-sm-12 col-lg-6 col-md-6 col-xs-12 btn-submit" @click="submit(this.button)">{{this.button}}</button><br>
-                </div>
-
             </div>
         </div>
 </template>
@@ -41,15 +36,16 @@ export default {
     },
     data(){
         return{
-            button: "Submit",
+            items:{},
+            tradeItems: {},
             showLandPage:true,
             showResultPage:false,
         }
     },
     methods: {
-        submit(value) {
-            console.log(value);
-            this.button = "Close"
+        submit(item,tradeItem) {
+            this.items = item;
+            this.tradeItems = tradeItem;
             this.showLandPage = false;
             this.showResultPage = true;
         },

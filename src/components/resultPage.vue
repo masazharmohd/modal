@@ -48,11 +48,13 @@ export default {
     position: relative;
 }
 .close {
-    font-size: 20px;
+    font-weight: 10px;
+    font-size: 14px;
     height: 50px;
     width: 300px;
-    color: white;
-    background: darkslategrey;
+    background-color: rgb(61, 61, 61);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
     border-radius: 5px;
 }
 .resultPage {
